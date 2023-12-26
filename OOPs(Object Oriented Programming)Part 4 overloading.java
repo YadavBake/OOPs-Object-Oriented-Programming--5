@@ -1,9 +1,9 @@
 
-																OOPs(Object Oriented Programming)Part-4 ||overloading
-															===========================================================
+												OOPs(Object Oriented Programming)Part-4 ||overloading
+											     ===========================================================
 															
 -------------------------		
-	 8. OverLoading.*	
+    8. OverLoading.*	
 -------------------------	 
 
 Case 1: Automatic pramosion in Overloading.
@@ -18,7 +18,7 @@ Case 1: Automatic pramosion in Overloading.
 			
 			byte--->short-->|
 					|------>|-->int-->long-->float-->double
-			char----|	
+			        char----|	
 			
 	-> These is process is called automatic pramosion in overloading.		
 	
@@ -26,21 +26,21 @@ Case 1: Automatic pramosion in Overloading.
 
 		class Test {
 			
-			public void m1(int i ){<----------------------
-														 |
-				System.out.println("Int-arg method");	 |
-			}											 |//These are overloaded method.
-			public void m1(float f ){					 |
-														 |
-				System.out.println("float-arg method");	 |
-			}<--------------------------------------------
+			public void m1(int i ){<-----------------------
+								       |
+				System.out.println("Int-arg method");  |
+			}					       |//These are overloaded method.
+			public void m1(float f ){		       |
+								       |
+				System.out.println("float-arg method");|
+			}<----------------------------------------------
 
 			public static void main(String args[]){
 				
 				Test t = new Test();
 				t.m1(10); //Int-arg						byte--->short-->|
-				t.m1(10.5);//float-arg							|------>|-->int-->long-->float-->double
-				t.m1('a')// int-arg						char---|	
+				t.m1(10.5);//float-arg							        |------>|-->int-->long-->float-->double
+				t.m1('a')// int-arg						         char---|	
 				t.m1(10l);//float-arg
 				t.m1(10.5);//invalid CE: cannot finad symbol, Symbol:method m1(double), Location: class Test
 				
@@ -55,20 +55,20 @@ Case 1: Automatic pramosion in Overloading.
 		class Test {		
 					
 			public void m1(String s  ){<------------------		
-														 |		
-				System.out.println("String version ");	 |		
-			}											 |//These are overloaded method.		
-			public void m1(Object o  ){					 |		
-														 |		
-				System.out.println("Object version");	 |		
-			}<--------------------------------------------		
+								      |		
+				System.out.println("String version ");|		
+			}					      |//These are overloaded method.		
+			public void m1(Object o  ){		      |		
+								      |		
+				System.out.println("Object version")l;|		
+			}<--------------------------------------------
         
         	public static void main(String args[]){						Object (Parent)
-																			  ^
-        		Test t = new Test();										  |
-        		t.m1(new object );//object version 							  |	
-        		t.m1("durga"); //Streing version 							  |
-        		t.m1(null);// String 									String (child)
+												   ^
+        		Test t = new Test();				 			   |
+        		t.m1(new object );//object version 					   |	
+        		t.m1("durga"); //Streing version 					   |
+        		t.m1(null);// String 							String (child)
         		t.m1(10l);
         		t.m1(10.5);
         		
@@ -83,20 +83,20 @@ Case 1: Automatic pramosion in Overloading.
 		class Test {		
         	
         	public void m1(String s ){<-------------------
-        												 |
-        		System.out.println("String version");	 |
-        	}											 |//These are overloaded method.
-        	public void m1(StringBuffer sb ){			 |
-        												 |
-        	System.out.println("StringBuffer version");	 |
+        						      |
+        		System.out.println("String version"); |
+        	}					      |//These are overloaded method.
+        	public void m1(StringBuffer sb ){	      |
+        						      |
+        	System.out.println("StringBuffer version");   |
         }<------------------------------------------------
-        
+			
         	public static void main(String args[]){
-																							Object 
-        		Test t = new Test();														  |
+																Object 
+        		Test t = new Test();											  |
         		t.m1("durga);//String version								------------------------------------				
-        		t.m1(new StringBuffer("durga");//StringBuffer version		|								   |			
-        		t.m1(null);//CE: reference to m1 is ambigues	  		 String							StringBuffer
+        		t.m1(new StringBuffer("durga");//StringBuffer version					|				   |			
+        		t.m1(null);//CE: reference to m1 is ambigues	  				      String				StringBuffer
 			}
 		}
         		
@@ -109,14 +109,14 @@ Case 1: Automatic pramosion in Overloading.
 		
 		class Test {
 			
-			public void m1(int i,float f ){<--------------
-														 |
-				System.out.println("Int-float version"); |
-			}											 |//These are overloaded method.
-			public void m1(float f,int i  ){			 |
-														 |
-				System.out.println("float-int version"); |
-			}<--------------------------------------------
+			public void m1(int i,float f ){<-------------------
+									  |
+				System.out.println("Int-float version");  |
+			}						  |//These are overloaded method.
+			public void m1(float f,int i  ){		  |
+									  |
+				System.out.println("float-int version");  |
+			}<-------------------------------------------------
 		
 			public static void main(String args[]){
 				
@@ -139,13 +139,13 @@ Case 1: Automatic pramosion in Overloading.
 			class Test {
 					
 				public void m1(int x ){<----------------------	
-															 |	
-		    		System.out.println("General method");	 |
-		    	}											 |//These are overloaded method.
-		    	public void m1(int... x ){					 |
-		    												 |
-		    		System.out.println("var-arg method");	 |
-		    	}<--------------------------------------------
+									     |	
+		    		System.out.println("General method");	     |
+		    	}						     |//These are overloaded method.
+		    	public void m1(int... x ){			     |
+		    							     |
+		    		System.out.println("var-arg method");	     |
+		    	}<----------------------------------------------------
 		    
 		    	public static void main(String args[]){
 		    		
@@ -192,3 +192,5 @@ Case 1: Automatic pramosion in Overloading.
 				   t.m1(a1); //Animal version
 			   }
 		}
+
+		

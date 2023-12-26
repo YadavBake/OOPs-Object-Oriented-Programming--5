@@ -1,11 +1,11 @@
 
-														OOPs(Object Oriented Programming) Part-2 || Inheritance||IS-A
-													=====================================================================
-																				Module-2 
-																			  ==============	
+											OOPs(Object Oriented Programming) Part-2 || Inheritance||IS-A
+										    =====================================================================
+														Module-2 
+													    ==============	
 																		
 -------------------------------
-	5. IS-A Relanationship.
+   5. IS-A Relanationship.
 -------------------------------
 
  - It is also known as inheritance.
@@ -15,7 +15,7 @@
  - By using extends  keyword we can impliment IS-A Relationship.
 	
  
-	class P {										class Test{
+	class P {					  class Test{
 		                                            	
 		public void m1(){                           	public static void main(String args[]){
 			                                        		
@@ -23,15 +23,15 @@
 		}                                           		p.m1(); //valid 
 	}                                               		p.m2();//invalid CE: Cannot find Symbol: Symbol : method m2(), Location: class P 
 	class C extends P {                             		
-		                                            	2.  C c = new C();
+		                                            		2.  C c = new C();
 		public void m2(){                           		c.m1();//valid
-			                                        		c.m2();//valid
+			                                        	c.m2();//valid
 			System.out.println("child");            		
-		}                                           	3.  P p1 = new C();
+		}                                           		3.  P p1 = new C();
 	}                                               		p1.m1();//valid 
 	                                                		p1.m2();//invalid CE: Cannot find Symbol: Symbol : method m2(), Location: class P 
 	                                                		
-	                                                	4.  C c1 = new P();//invalid CE: incompatible types found: P required :C 
+	                                                		4.  C c1 = new P();//invalid CE: incompatible types found: P required :C 
 	                                                	
 	                                                	}
 	                                                }
@@ -49,24 +49,25 @@
 		
 		Ex. 
 		
-			-> Creating Loan module With Inheritance and without Inheritance 
+--------------------------------------------------------------		
+ Creating Loan module With Inheritance and without Inheritance 
+---------------------------------------------------------------
 
 
-
-					Without Inehertance 														With Inheritance
-	Ex. 				
+					Without Inehertance 									  With Inheritance
+	Ex. 			 -------------------------------							   ----------------------------	
 															
-	class VLoan {      class HLoan {			class PLoan {										class Loan {									
-		               	                        	            										
-	 //300 methods      //300 methods            //300 methods  										// 250 Method 
+	class VLoan {      class HLoan {	class PLoan {								class Loan {									
+		               	                        	            									
+	 //300 methods      //300 methods            //300 methods  								// 250 Method 
 	                                                            										
-	}                  }                        }               									}
+	}                  }                        }               							}
 		                                                        									
-			                                                    class VLoan extends Loand  {      class HLoan  extends Loand{			class PLoan extends Loand {		
+			                                                    class VLoan extends Loan  {          class HLoan  extends Loan {			class PLoan extends Loan {		
 																															
-																		//50 specific methods      			//50 specific methods            		//50 specific methods 
+										//50 specific methods      	        //50 specific methods            		//50 specific methods 
 																															
-			                                                    }                 					 }                        					}		
+			                                                    }                 			 }                        			}		
 	                                                            			
 	
 			/*900 Method we have to write        												400 method we have to write 			
@@ -87,27 +88,28 @@
 		- Throwable class the most comman methods which are required for every exception and error classes hence these class access root for java exception hirarchy.
 
 																			
-																	Object 
-																	  |
-										--------------------------------------------------------------------------
-										|			 |															 |			
-										|			 |	..........................								 |
-									  String 	 StringBuffer											    Throwable
-																											    |
-																						----------------------------------------------------------
-																					    |														 |
-																						|														 | 	
-																				    Exception 												    Error 
-																					    |														  |	
-																	----------------------------------------							------------------------
-																	|							|	.......|							|					   |
-																	|					 	IOException							OutOfMemoryError
-																RuntimeException				|										....
-																	|							|
-																	|-AE						...
-																	|-NPE
-																	...	
-	Multiple Inheritance 
+											Object 
+											  |
+				--------------------------------------------------------------------------
+				|			 |						 |			
+				|			 |	..........................		 |
+			      String 	 	     StringBuffer				    Throwable
+												        |
+									  ----------------------------------------------------------
+									  |							   |
+									  |							   | 	
+								      Exception 						 Error 
+						   		         |							   |	
+						    ----------------------------------------				------------------------
+						   |		    |	.......		  |				|		       |
+						   |		IOException		  IE 			OutOfMemoryError
+					    RuntimeException	   |							....
+						  |		   |
+						  |-AE		  ...
+						  |-NPE
+						   ...	
+ --------------------------    
+   Multiple Inheritance 
   -------------------------	
 	
 	- A java class can't extends more than one class at a time hence a java won't provide support multiple inheritance in classes.
@@ -132,12 +134,12 @@
 		
 			
 		class A extends B {									
-											Object					
-											  ^						
-			B			OBject 			 	  | 				
-			|			  |					  |			
-			|	 		  |					  B		
-			|	 		  |				      ^	
+								   Object					
+								      ^						
+			B	   OBject 			      | 				
+			|	      |				      |			
+			|	      |				      B		
+			|	      |				      ^	
 			--->A<--------- 			      |	
 			It is multiple				      |
 			inheritance 				      A
@@ -150,12 +152,12 @@
 	
 		- There may be chance of ambiguity problem hence a java won't provide support for multiple inheritance.
 		
-		p1-m1()				p2-->m1()
-	    |				    |
-	    |	 		  		|
-	    |	 		  		|
+	   p1-m1()		p2-->m1()
+	    |  		        |
+	    |	  		|
+	    |	  		|
 	    -------->C<----------
-			c.m1();
+		    c.m1();
 		Ambiguity problem 	
 	
 	-> But interface and extends any number of interfaces simulateneously hence a java provide support for multiple inheritance with respect to interface.
@@ -176,25 +178,25 @@
 		
 		Ex 
 		
-		Parent interface 1 							Parent interface 2 
-		 |											  |
-		 |	m1();									  |m1();	
+		Parent interface 1 			Parent interface 2 
+		 |					      |
+		 |	m1();				      |m1();	
 		 |                                            |
 		 |                                            |
-	     |                                            |
-	     |                                            |
+	     	 |                                            |
+	     	 |                                            |
 		 |                                            |
 		 ---------------->Child interface<------------- 	
 								
-							m1();
-							 |
-							 |
-					Implementation classes 
+					m1();
+					 |
+					 |
+				Implementation classes 
 
-							m1() {
+					m1() {
 								
-								...
-							}
+						...
+					}
 							
 	Note: 
 
@@ -207,16 +209,16 @@
 		
 		Ex. 
 
-	class A extends  A {											class A extends B {
-																											   -------
-	}                           								    							            -->|  B  |---
-																	}                                       |  -------  |
-	  -------                   								    class B extends A {						|	  |	    |
-	--|	A   |<--                								    										|	  |     |
-	| -------  |                								    }										|	  |     |
-	------------                								    										|  -------- |
-																											--|  A   |<-
-																											  --------
+	class A extends  A {									class A extends B {
+																	   -------
+	}                           													-->|  B  |---
+												}                                       |  -------  |
+	  -------                   								    class B extends A {			|     |	    |
+	--|  A   |<--                								    					|     |     |
+	| -------  |                								    }					|     |     |
+	------------                								    					|  -------- |
+																	--|  A   |<-
+																	  --------
  //invalud CE: cyclic inheritance involving A  						//invalud CE: cyclic inheritance involving A 	
 			
    

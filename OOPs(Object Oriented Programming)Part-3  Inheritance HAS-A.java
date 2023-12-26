@@ -1,6 +1,6 @@
 
-													OOPs(Object Oriented Programming)Part-3 || Inheritance||HAS-A 
-												====================================================================
+											OOPs(Object Oriented Programming)Part-3 || Inheritance||HAS-A 
+									  	    ====================================================================
 --------------------------
  6. HAS-A Relanationship	
 --------------------------
@@ -13,10 +13,10 @@
 
 	Ex. 
 		
-		class Car {							Engine {
+		class Car {					Engine {
 			                                	
-			Engine e = new Engine();        	// Engine specific functionality
-			                                }
+			Engine e = new Engine();        		// Engine specific functionality
+			                                	}
 		}
 		
 		Car HAS-A Engine Reference.
@@ -37,15 +37,15 @@
 							
 								It is composition
 						----------------------------------	
-						|								  |
-						|	---------		---------	  |
-						|	|  IT	|       |  IT	|-------------> Contained Object within container
-						|	---------	    ---------     |
-						|                                |
-						|	---------		---------     |
-						|  |  IT	|       |  IT	|     |---> container object 
-						|  ---------       ---------     |
-						|                                |
+						|				  |
+						|	---------    ---------	  |
+						|	|  IT	|    |  IT   |-------------> Contained Object within container
+						|	---------    ---------    |
+						|                                 |
+						|     --------- ---------	  |
+						|     |  IT   |  |  IT   |     	  |---> container object 
+						|     ---------  ---------        |
+						|                                 |
 						----------------------------------
 							Univercity
 							
@@ -62,19 +62,19 @@
 				  
 				  
 			   
-								-----------------	   						   
-								|	---------	|				-------               
+								--------------------	   						   
+								|	---------   |	    -------               
 								|	| IT 	|-----------------> | p1  |			   
 								|	---------   |               -------
 								|	            |
-								|	---------   |				-------
+								|	---------   |		    -------
 								|	|  BE	|-----------------> | p2  |-->// These are contained Object 
 								|	---------   |               -------
 								|	            |
-								|	---------   |				-------
+								|	---------   |		    -------
 								|	| B.com |-----------------> | p3  |
 								|	---------   |               -------
-								-----------------	   
+								--------------------	   
 								|	Department    
 								|-->Cointainer Object 	   
 									
@@ -94,48 +94,48 @@ Note:
 
 	Ex. 
 		 ---------------------
-		 |	perions class    |
+		 |  perions class    |
 		 ---------------------
                  |
-				 |-> IS-A Relanationship
+		 |-> IS-A Relanationship
                  |
-        ----------------------  
+	        ----------------------  
 		|   Student class    |
-	    ----------------------
+	        ----------------------
 
  -> If we wan't part of the functionality then we should go for HAS-A relationship.
  
 
 	Ex. 
-		 ---------------------
-    	 |	Test  class 	 |
-		 |  //100 Methods    |
-    	 ---------------------
+	 ---------------------
+	 |  Test  class      |
+	 |  //100 Methods    |
+    	---------------------
                  |
-    			 |-> IS-A Relanationship
+    		 |-> IS-A Relanationship
                  |
         ----------------------  
     	|   Student class    |
-		| Test t = new Test()|
-		|  t.m1();			 |	
-		|  t.m6();			 |
+	| Test t = new Test()|
+	|  t.m1();	     |	
+	|  t.m6();	     |
         ----------------------
 		
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-																		------------------------
-																		  7. Method Signature.*
-																		------------------------ 
+											------------------------
+											  7. Method Signature.*
+											------------------------ 
 
 
 -> In the java method signature consist of method names followed by arguments types.
 
 	
 		  -------------------------------------------------------
-		 |	public 	static 		int 		m1(int i, float f)  |
-		 | ---------------    -----		   -------------------  |	
-		 | /*These are		 //return	   //These are method   |==>// These all are method declarations.
-		 |	modifiers*/		//type 			signature.          |
+		 |   public static     int 	    m1(int i, float f)  |
+		 | ---------------    -----	   -------------------  |	
+		 | /*These are	      //return	   //These are method   |==>// These all are method declarations.
+		 |  modifiers*/	     //type 	    signature.          |
 		 --------------------------------------------------------
 
 -> return type is not part of method signature in java.
@@ -144,17 +144,17 @@ Note:
 
 	Ex. 
 	
-		class Test {							-------------
-												|			|		Test t = new Test();
+		class Test {				    -------------
+							    |		|		Test t = new Test();
 			public void m1(int i){              |   m1(int) |		t.m1(10);//valid 
-				                                |           |		t.m2("Durga"); //valid 
+				                            |           |		t.m2("Durga"); //valid 
 			}                                   |-----------|		t.m3(10.5);//invalid CE: Cannot find symbol, Symbol: method m3(double), Location: class Test
-			public void m2((Stirng s){			|			|
+			public void m2((Stirng s){	    |		|
 			                                    |           |
 			}                                   | m2(Stirng)|
-		}                                       |           |
-												-------------
-												 Method table 
+		}                                           |           |
+							    -------------
+							     Method table 
 
 
  -> Within in class two method with the same signature not allowed.
@@ -177,8 +177,8 @@ Note:
 
 ====================================================================================================================================================================================
 
-																			8. OverLoading.*
-																	============================
+											8. OverLoading.*
+										  ============================
 
 
  -> Two methods are said to be overloaded if and only if both methods having same name but different arguments types.
@@ -209,16 +209,16 @@ Note:
 		class Test{
 			
 			public void m1(){<--------------------------------		
-															 |
-				System.out.println("No-Arg method");         |
-			}                                                |
-			public void m1(int i){							 |	
-				                                             |//===> Overloaded Methods
-				System.out.println("Int-arg method");        |
-			}												 |
-			public void m1(double d ){                       |
-				                                             |
-				System.out.println("Double-arg method");     | 
+									  |
+				System.out.println("No-Arg method");      |
+			}                                                 |
+			public void m1(int i){				  |	
+				                                          |//===> Overloaded Methods
+				System.out.println("Int-arg method");     |
+			}						  |
+			public void m1(double d ){                        |
+				                                          |
+				System.out.println("Double-arg method");  | 
 			}<------------------------------------------------                                               
 		                                                    
 		

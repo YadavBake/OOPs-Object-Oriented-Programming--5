@@ -1,6 +1,6 @@
 
-													OOPs(Object Oriented Programming) Part-7||overriding ||varargs method
-												===========================================================================
+											OOPs(Object Oriented Programming) Part-7||overriding ||varargs method
+										    ===========================================================================
 
 												
 ----------------------------------------------
@@ -11,20 +11,20 @@
  
 	Ex. 
 
-	class P {													class Test {
+	class P {							class Test {
 		                                                        	
-		public void m1(int... x ){<---------                     public static void main(String args[]){
+		public void m1(int... x ){<------------                     public static void main(String args[]){
 			                               |                     		
 			System.out.println("Parent");  |                     		P p = new P();
-		}                                  |                     		p.m1(10); //parent 
-	}                                      |                     		
-	class C extends P {                    |=>// It is overloading 		C c = new C ();
-		                                   |  //butnot overriding 		c.m1(10); //child 
-		public void m1(int x ){            |                     		
+		}                                      |                     		p.m1(10); //parent 
+	}                                     	       |                     		
+	class C extends P {                    	       |=>// It is overloading 		C c = new C ();
+		                                       |  //butnot overriding 		c.m1(10); //child 
+		public void m1(int x ){                |                     		
 			                               |                     		P p1 = new C();
 			System.out.println("Child");   |                       		p1.m1(10);  // parent 
-		}<----------------------------------                                                       	}
-	}                                                           }
+		}<--------------------------------------                              }
+	}                                                           	}
 	
 	
 	- In the above program if we replace child method with var-arg method then it will become overriding  in these case the output is Parent child child.
@@ -40,13 +40,13 @@
 	Ex 
  
   
-	class P {								class Test {										Parent:		non-static			static 				non-static			static
+	class P {				class Test {						Parent:		non-static	static 		non-static	static
 		                                    	                                                
-		int x = 888;                        	public static void main(String []){             child :		non-static			non-static			static				static
-		                                    		                                            	
-	}                                       		P p = new P();                              			888					888					888					888
-	class C extends P {                     		System.out.println(p.x); //888              O/P	  : 	999                 999                 999                 999
-		                                    		                                            			888                 888                 888                 888
+		int x = 888;                        	public static void main(String []){             child :		non-static	non-static	static		static
+		                                    		                                        	
+	}                                       		P p = new P();                              		888		  888		888		888
+	class C extends P {                     		System.out.println(p.x); //888              O/P	  : 	999               999           999             999
+		                                    		                                            		888               888           888             888
 		int x = 999;                        		C c = new C();
 	}                                       		System.out..println(c.x); //999
 	                                        		
@@ -60,34 +60,34 @@
 ----------------------------------------------------
 
 	-----------------------------------------------------------------------------------------------------------------------------------------------------------------------		
-	|	Property 			|		Overloading									 |		                            	Overriding 										  |				
+	|	Property 	|		Overloading			     |		                            	Overriding 				      |				
 	|-----------------------|----------------------------------------------------|----------------------------------------------------------------------------------------|		
-	| 		                |                                                    |                                                                                        |
-	| 1. Method name 		| 	 Must be same 									 |	Must be same 			                                                              |
+	| 		        |                                                    |                                                                                        |
+	| 1. Method name 	| 	 Must be same 				     |	Must be same 			                                                      |
 	|                       |                                                    |                                                                                        |
-	| 2. Arguments types 	| 	 Must be same[Atleast Order]					 |	Must be same[including order]                                                         |
+	| 2. Arguments types 	| 	 Must be same[Atleast Order]		     |	Must be same[including order]                                                         |
 	|                       |                                                    |                                                                                        |
-	| 3. Method Signatures  | 	 Must be differnt 								 |	Must be same.		                                                                  |
+	| 3. Method Signatures  | 	 Must be differnt 			     |	Must be same.		                                                              |
 	|                       |                                                    |                                                                                        |
-	| 4. Return types 		| 	 No rules or No restriction 					 |	Must be same until 1.4v version from 1.5v version onwords co-veriant types allowed    |
+	| 4. Return types 	| 	 No rules or No restriction 		     |	Must be same until 1.4v version from 1.5v version onwords co-veriant types allowed    |
 	|                       |                                                    |                                                                                        |
-	| 5. private,static		|     Can be overloaded								 |	Can not be overriden.                                                                 |
-	|	 final method       |                                                    |                                                                                        |
-    |                       |                                                    |                                                                                        |
-    | 6. Access modifiers   |     No restriction in overloading 				 |	 we can't reduce  scope of access modifiers but  we can increase.                     |
-    |                       |                                                    |                                                                                        |
-    | 7. throws class		|     No restriction 								 |	If child class method throws any checked exception compulsory parent class method     |
-    |						|													 |	should throws the same checked exception or it parent but no restriction for          |
-	|						|													 |  unchecked exception.                                                                  |
-    | 			            |                                                    |                                                                                        |
-    | 8. Method resolution  |     Always takes care by compile based reference	 |	Always takes care by JVM based runtime object.                                        |
-    | 					    |     type.                                          |                                                                                        |
-    |                       |                                                    |                                                                                        |
-    | 9. It is also known   |     Compile time polymorphisam static polymorphisam|	runtime polymorphisam or dynamic polymorphisam or late binding.                       |
-    |    as.				|     early binding                                  |                                                                                        |
-    |                       |                                                    |                                                                                        |
-    |                       |                                                    |                                                                                        |
-    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+	| 5. private,static	|     Can be overloaded				     |	Can not be overriden.                                                                 |
+	|	 final method   |                                                    |                                                                                        |
+    	|                  	|                                                    |                                                                                        |
+    	| 6. Access modifiers   |     No restriction in overloading 		     |	 we can't reduce  scope of access modifiers but  we can increase.                     |
+    	|                       |                                                    |                                                                                        |
+    	| 7. throws class	|     No restriction 				     |	If child class method throws any checked exception compulsory parent class method     |
+    	|			|						     |	should throws the same checked exception or it parent but no restriction for          |
+	|			|						     |  unchecked exception.                                                                  |
+	| 			|                                                    |                                                                                        |
+	| 8. Method resolution  |     Always takes care by compile based reference   |	Always takes care by JVM based runtime object.                                        |
+    	| 			|     type.                                          |                                                                                        |
+    	|                       |                                                    |                                                                                        |
+    	| 9. It is also known   |     Compile time polymorphisam static polymorphisam|	runtime polymorphisam or dynamic polymorphisam or late binding.                       |
+    	|    as.		|     early binding                                  |                                                                                        |
+    	|                       |                                                    |                                                                                        |
+    	|                       |                                                    |                                                                                        |
+    	----------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
 
 Note: 
@@ -159,16 +159,16 @@ Note:
 
 		- Uses of parent reference to hold child object is the concept of polymorphisam.
 			
-			Collection(I)
+			    Collection(I)
 				|								List l = new ArrayList 	
 				|                               List l = new LinkedList 
-			   List 	                        List l = new Vector  	
-				|                               List l = new Stack 		
-		-----------------------
-	    |		  |			  |	
-   ArrayList   LinkedList    Vector 
-							   |
-							 Stack 
+			      List 	                        List l = new Vector  	
+			        |                               List l = new Stack 		
+		        -----------------------
+	 	       |	   |	      |	
+   		   ArrayList   LinkedList    Vector 
+					       |
+				   	     Stack 
 
 							
 -> Parent class reference can be used to hold child object but by using that reference we can call only the methods available in parent class and we can't child specific methods 
@@ -195,30 +195,30 @@ Note:
 			
 			
 							
-															-----------------------------
-					Object o = al.get(0);			al----> | O  |	O 	|	O	|	O	| 					public List m1(){
-															-----------------------------	                	
-																Hetrogeneous object                         	AL|LL|V|S
-			                                                                                                	
-																											}
-																											
-	-------------------------------------------------------------------------------------------------------------------------------------------------																									
-	|		C c = new C ()									|			P p = new C()                                                                |
-	|		                                                |                                                                                        |
-	|		Ex ArrayList l = new ArrayList					|			List l = new ArrayList();                                                    |
-	|-------------------------------------------------------|----------------------------------------------------------------------------------------|
-    |                                                       |                                                                                        |
-	|1. We can use these aprroach if know exact runtime type| 	1. We can use these approach if we don't know exact runtime type of	                 |
-	|   of object.											|	   object.                                                                           |
-	|		                                                |                                                                                        |
-	|2. By child using reference we can call both parent 	|	2. By using parent reference we can call only methods available in parent class      |
-	|   class and child class methods(these is the advantage| 		and we can't call child specific methods(these is the disadvantage of these      |
-	|	of these approach).									|		approach).                                                                       |
-	|	                                                    |                                                                                        |
-	|3. We can use child reference to hold only particular 	|	3. We can use parent reference to hold any child class oebject these is the advantage |
-	|   child class object (these is the disadvantage of 	|	   these approach.                                                                   |
-	|   these approach).	                                |                                                                                        |
-	|-------------------------------------------------------|----------------------------------------------------------------------------------------|	
+											-----------------------------
+					Object o = al.get(0);			al----> | O  |	O  |	O   |	O   | 		public List m1(){
+											-----------------------------	         	
+											      Hetrogeneous object 	             AL|LL|V|S
+			                                                                                                																											}
+
+
+	----------------------------------------------------------------------------------------------------------------------------------------------------																									
+	|		C c = new C ()				   |			P p = new C()                                                       |
+	|		                                           |                                                                                        |
+	|		Ex ArrayList l = new ArrayList		   |			List l = new ArrayList();                                           |
+	|----------------------------------------------------------|----------------------------------------------------------------------------------------|
+    	|                                                          |                                                                                        |
+	|1. We can use these aprroach if know exact runtime type   | 	1. We can use these approach if we don't know exact runtime type of	            |
+	|   of object.						   |	   object.                                                                          |
+	|		                                           |                                                                                        |
+	|2. By child using reference we can call both parent 	   |	2. By using parent reference we can call only methods available in parent class     |
+	|   class and child class methods(these is the advantage   | 		and we can't call child specific methods(these is the disadvantage of these |
+	|	of these approach).				   |		approach).                                                                  |
+	|	                                                   |                                                                                        |
+	|3. We can use child reference to hold only particular 	   | 3. We can use parent reference to hold any child class oebject these is the advantage  |
+	|   child class object (these is the disadvantage of 	   |	   these approach.                                                                  |
+	|   these approach).	                                   |                                                                                        |
+	|----------------------------------------------------------|----------------------------------------------------------------------------------------|	
 	
 
 

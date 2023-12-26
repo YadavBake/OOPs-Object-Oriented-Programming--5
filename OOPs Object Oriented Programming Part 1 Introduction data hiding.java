@@ -1,13 +1,13 @@
 
-															OOPs(Object Oriented Programming)Part-1||Introduction||data hiding
-														========================================================================
+											OOPs(Object Oriented Programming)Part-1||Introduction||data hiding
+										     ========================================================================
 														
 														
  1. Data hiding.<-----------------			
- 2. Abstraction.			     |
+ 2. Abstraction.	   	 |
  3. Encapsulation.               |//=> Module-1 
- 4. Tightly Encapsulation.		 | 
- 5. IS-A Relanationship.		 |
+ 4. Tightly Encapsulation.	 | 
+ 5. IS-A Relanationship.	 |
  6. HAS-A Relanationship.---------
  
  7. Method Signature.*
@@ -22,9 +22,9 @@
 		
 
 =====================================================================================================================================================================================
-
-																			Module-1 
-																		===============
+	
+												Module-1 
+											    ===============
 -----------------																		
   1. Data hiding 
 -----------------
@@ -61,7 +61,7 @@
 
 
 ----------------------
-	2. Abstraction.		
+  2. Abstraction.		
 ----------------------
 
 	-> Hiding internal implementation and just highlite the set of service what we are offering, is the concept Abstraction.
@@ -88,16 +88,16 @@
 
 		EX. 
 		
-			class Studnet {								----------
-														|.	.	.|
+			class Studnet {							----------
+											|.   .	.|
 					data member(variables)				| .  . . |
-														|  .  .  |
-							+							----------
-														|  . . . |
-					methods(behavior)					| . . .  |
-														|. . .   |
-			}											----------
-														  CAPSULE
+											|  .  .  |
+							+				----------
+											|  . . . |
+					methods(behavior)				| . . .  |
+											|. . .   |
+			}								----------
+											  CAPSULE
 			
 	-> If any components follows data hiding and Abstractions such type of component is said to be encapsuled component.
 
@@ -105,23 +105,23 @@
 			
 		Ex. 
 		
-				public class Account {														------------------------
-																							|					   |
-					private double balance;  // Data hiding use here           				| Welcome to D Bank    |
-																							|                      |
+				public class Account {								------------------------
+														|		       |
+					private double balance;  // Data hiding use here           		| Welcome to D Bank    |
+														|                      |
 					public double getBalance(){<-------------------------------------------	|  ------------------  |
-																							|  | Balance Enquiry|  |
-						//validation                                        				|  ------------------  |
-						return balance;														|	                   |
-					}                                                       				|   ------------------ |
+														|  | Balance Enquiry|  |
+						//validation                                        		|  ------------------  |
+						return balance;							|   	               |
+					}                                                       		|   ------------------ |
 					public void setBalance(double balance){<--------------------------------|   | Update Balance | |
-						//validation									|					|   ------------------ | 
-						this.balance=balance;                           |    				|                      |
-					}                                                   |    				|                      |
-				}														|					------------------------
-																		|						GUI Screen 		
-		                                                                -------------------------|
-		                                                                    Abstraction use here.
+						//validation					|		|   ------------------ | 
+						this.balance=balance;                           |    		|                      |
+					}                                                       |    		|                      |
+				}								|		------------------------
+												|			GUI Screen 		
+		                                                               			 -------------------------|
+		                                                                   		  Abstraction use here.
 	
 	-> The main advantages of Encapuslation are
 
@@ -159,8 +159,8 @@
 	Q. which of the following classes are tightly encapsulated ?
 
 		class A {				
-								//Yes i 
-			private int x =10;		
+								 
+			private int x =10; //Yes 		
 		}						
 		class B extends A {
 							

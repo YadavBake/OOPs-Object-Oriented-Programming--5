@@ -1,6 +1,6 @@
 
-																OOPs(Object Oriented Programming) Part-5 ||overriding
-															============================================================
+											OOPs(Object Oriented Programming) Part-5 ||overriding
+										    ============================================================
 
 ---------------------
    9. Overriding.*
@@ -20,15 +20,15 @@
 				System.out.println("Gold|Cash|Land");
 			}
 			public void marry(){<-----------------------------------------------------------------------
-																	 |//->Overriden method 			   |
-				System.out.println("Subh Laxmi");					 |								   |
-			}<--------------------------------------------------------								   |						
-		}																							   |
-		class Child extends Parent {																   |//==> These is called overriding 
-																									   |
-			public void marry(){<---------------------------------									   |	
-																 |									   |	
-				System.out.println("Thrisha|Naintara|charmi");   |//-> Overriding Method 			   |	
+										 |//->Overriden method 		   |
+				System.out.println("Subh Laxmi");		 |				   |
+			}<--------------------------------------------------------				   |						
+		}												   |
+		class Child extends Parent {									   |//==> These is called overriding 
+														   |
+			public void marry(){<---------------------------------					   |	
+								              |					   |	
+				System.out.println("Thrisha|Naintara|charmi");|//-> Overriding Method 		   |	
 			}<------------------------------------------------------------------------------------------
 		}
 		
@@ -83,12 +83,12 @@
 
 		
 	  
-	   Parent class method return type :-   	   Object 						Number 					String 			double 
-											         | 							   |					  |				  | 	
-											         |                             |                      |               |
-											         |                             |                      |               |
-	   child class method return type  :-  Object|String|StringBuffer        Number|Integer 			Object 			 int 
-											 //valid 							valid 					invalid 		 invalid 
+	   Parent class method return type :-   	   Object 		    Number 		  String   	  double 
+							     | 			      |			     |		     | 	
+							     |                        |                      |               |
+							     |                        |                      |               |
+	   child class method return type  :-  Object|String|StringBuffer        Number|Integer 	  Object 	    int 
+						   //valid 			   valid 		invalid 	  invalid 
 		
 		
 -> Parent class private methods not available to the child and hence overriding concept not applicable for private methods.	  
@@ -98,10 +98,10 @@
 		class P {
 			
 			private void m1(){<----------
-									    |
+						    |
 			}                           |
-		}                               |//=> It is valid but not overriding.
-		class C extends P {				|
+		}                                   |//=> It is valid but not overriding.
+		class C extends P {		    |
 			                            |
 			private void m1(){          |
 			}<---------------------------
@@ -115,13 +115,13 @@
 			class P {
 				
 				public final void m1(){<-------
-											   |
+							       |
 				}                              |
-			}                                  |
-			class C extends P {                |//==> CE: m1() in C cannot override m1() in P, Overriden method is final 
+			}                                      |
+			class C extends P {                    |//==> CE: m1() in C cannot override m1() in P, Overriden method is final 
 				                               |
 				public void m1(){              |
-											   |	
+							       |	
 				}<------------------------------	
 			}
 		
@@ -163,12 +163,12 @@
 	synchronized,native,strictfp 
 
 
-Parent Methos -:    final 		non-final		abstract		non-abstract		synchronized		non- synchronized	native 		non-native		strictfp	 non-strictfp
-					  |				|				|				|					 |					 |				  |				|				|				|
-					  |	            |               |               |                    |                   |                |             |               |               |
-					  |             |               |               |                    |                   |                |             |               |               |
-chaild method -:  non-final 	  final 	   non-abstract      abstract			non-synchronized    synchronized      non-native     native        non-strictfp      strictfp
-				 //invalid 		  valid 			valid 			valid 				valid 				valid 			valid 			valid			valid 			valid 
+Parent Methos -:    final   non-final    abstract    non-abstract    synchronized     non- synchronized	   native     non-native       strictfp	      non-strictfp
+		     |	       |	    |		|		|		    |		     |		   |		   |		   |
+		     |	       |            |           |               |                   |                |             |               |               |
+		     |         |            |           |               |                   |                |             |               |               |
+chaild method -:  non-final  final     non-abstract   abstract	  non-synchronized      synchronized      non-native     native        non-strictfp      strictfp
+		 //invalid   valid 	valid 	       valid     	valid 		   valid 	   valid 	  valid		valid 		  valid 
 	  
 	  
 ->  While overriding we can't raduce scope of access modifiers but we can increase the scope.
@@ -194,10 +194,10 @@ chaild method -:  non-final 	  final 	   non-abstract      abstract			non-synchr
 		
 		
 		
-	parent class Method ->		public 		protected 			default						private 
-								  |				|				   |						   |
-                                  |             |                  |                           |
-                                  |             |                  |                           |
+	parent class Method ->		public 		protected 	  default			private 
+					 |		   |		      |				  |
+                                 	 |             	   |                  |                           |
+                                         |                 |                  |                           |
 	child class Mehod -> 		public     protected|public   default|protected|public   	   |--> //OVerriding concept not applicable for private method.
 	  
 	  

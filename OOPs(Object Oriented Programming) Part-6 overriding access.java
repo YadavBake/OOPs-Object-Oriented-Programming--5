@@ -1,6 +1,6 @@
 
-														OOPs(Object Oriented Programming) Part-6 ||overriding ||access
-													====================================================================
+											OOPs(Object Oriented Programming) Part-6 ||overriding ||access
+										     ====================================================================
 
 
 ------------------------------------------------
@@ -96,12 +96,12 @@
 		class P {
 			
 			public static void m1(){<---------
-				}							 |
-		}									 |
-		class C extends P {					 |//==> It is method hiding but not overriding.		
-											 |
-			public static void m1(){		 |
-											 |
+				}			 |
+		}					 |
+		class C extends P {			 |//==> It is method hiding but not overriding.		
+							 |
+			public static void m1(){	 |
+							 |
 			}<--------------------------------	
 		}
 
@@ -111,34 +111,34 @@
 
  -> All rules of method hiding are excetly same as overriding except the following differences.
  
-    --------------------------------------------------------------------------------------------------------------
-	|		Method hiding								|				Overriding 								 |	
+    ------------------------------------------------------------------------------------------------------------------
+	|		Method hiding 			    |				Overriding 		     |	
 	|---------------------------------------------------|--------------------------------------------------------|		
-	| 1. Both parent and child class method should 		| 1. Both parent and child class method should be        |
-	|	be static 										|	non-static.                                          |
-    |                                                   |                                                        |
+	| 1. Both parent and child class method should 	    | 1. Both parent and child class method should be        |
+	|	be static 				    |	non-static.                                          |
+        |                                                   |                                                        |
 	| 2. Compiler is responsible for method resovlution |	 2. JVM is always responsible for method resovlution |
-	|	based on reference type.						|	based on runtime object.                             |
-	|	                                                |                                                        |
-	| 3. It is also know as Compile time polymorphisam 	| 3. It is also know runtime polymorphisam or dynamic    |
-	|	or static polymorphisam or early binding.		|	polymorphisam or late binding.                       |
+	|	based on reference type.		    |	based on runtime object.                             |
+	|	                                            |                                                        |
+	| 3. It is also know as Compile time polymorphisam  | 3. It is also know runtime polymorphisam or dynamic    |
+	|	or static polymorphisam or early binding.   |	polymorphisam or late binding.                       |
     --------------------------------------------------------------------------------------------------------------
 
 	Ex. 	
     
-	class P {																								class Test {
+	class P {												class Test {
 		                                                                                                    	
-		public static void m1(){-------------                                                               	public static void main(String args[]){
-											|                                                               		
+		public static void m1(){----------------                                                               	public static void main(String args[]){
+						        |                                                               		
 			System.out.println("Parent");   |                                                               		P p = new  P ();
-		}                                   |//==> It is method hiding but not overriding.                  		p.m1();//parent 
-	}                                       |                                                               		
-	class C extends P {                     |                                                               		C c = new C();
-		                                    |                                                               		c.m1();//child 
-		public static void m1(){			|                                                               		
-											|                                                               		P p1 = new P();
+		}                                       |//==> It is method hiding but not overriding.                  		p.m1();//parent 
+	}                                       	|                                                               		
+	class C extends P {                     	|                                                               		C c = new C();
+		                                    	|                                                               		c.m1();//child 
+		public static void m1(){		|                                                               		
+							|                                                               		P p1 = new P();
 			System.out.println("Child");	|                                                               		p1.m1();//parent 
-		}<-----------------------------------                                                               		
+		}<---------------------------------------                                                               		
 	}                                                                                                       	}
 	                                                                                                        }
 

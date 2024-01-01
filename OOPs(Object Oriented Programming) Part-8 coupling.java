@@ -1,6 +1,6 @@
 
-																		OOPs(Object Oriented Programming) Part-8||coupling
-																	=========================================================
+											OOPs(Object Oriented Programming) Part-8||coupling
+										   =========================================================
 
 ----------------
  13. Coupling 																	
@@ -14,14 +14,15 @@
 
 	Ex. 
 	
-	class A {						class B {					class C {							class D {
+	class A {			class B {		class C {				class D {
 		                            	                        	                                	
-		static int i = B.j;         	static int j = C.k;     	static int  k = D.m1();         	public static int m1(){
+	static int i = B.j;         	static int j = C.k;        static int  k = D.m1();         	public static int m1(){
 	}                               }                           }                                   		
-	                                                                                                		return 10;
-	               above code  is  Tightly coupling                                                 	 }
+	                                                                                                return 10;
+	               above code  is  Tightly coupling                                              }
 	
- -> The above component are said to be tightly coupled each other becouse dependancy between the component is more.
+
+-> The above component are said to be tightly coupled each other becouse dependancy between the component is more.
 
  -> Tightly coupling is not a good programming practice because it has several serious disadvantages.
 
@@ -41,30 +42,30 @@
  -> For Every component a clear well define funcationality is defined then that is said to be follow High Cohesion.
   
 	Ex. 
-																																					------------------	
-																																					|				 | 
-	   TotalServlet																													|-------------- |     Reply      | 
-    -------------------------																						  				|	            |                | 
-	|					    |														------------------					------------------	        ------------------ 
-	|                       |														|				 |                  |				 |             reply.jsp       
-	| Login Page display    |														|                |----------------- |    Indox       | 
-	|                       |							------------------			|                |                  |                | 
-	| Validation page       |						    |				 |          |                |                  ------------------ 			------------------	
-	|                       |							|    longin      |          |                |                     inbox.jsp  |             |				 | 
-	| Inbox page            |							|                |          |                |								  |-------------|    Compose     | 		
+																					------------------	
+																					|		 | 
+	   TotalServlet																	|-------------- |     Reply      | 
+        -------------------------											  				|	        |                | 
+	|			|								    ------------------			------------------	         ------------------ 
+	|                       |								    |  		     |                  |		 |                   reply.jsp       
+	| Login Page display    |								    |                |----------------- |    Indox       | 
+	|                       |					------------------	    |                |                  |                | 
+	| Validation page       |					|		 |          |                |                  ------------------ 	    ------------------	
+	|                       |					|    longin      |          |                |                     inbox.jsp  |             |		     | 
+	| Inbox page            |					|                |          |                |				      |-------------|    Compose     | 		
 	|                       | /*70 lacks line 			------------------          |                |                                              |                | 
-	| reply page            |  code here write*/		   login.jsp                |                |                                              ------------------ 
-	|                       |                                                       |                |                                                 cpmpose.jsp       
-	| Compose page          |                                                       |                |				   ------------------	
-	|                       |                                                       |                |                 |			    | 
-	| Error Page            |                                                       |                |-----------------|    Error       | 
-	| .                     |                                                       |                |                 |                | 
-	| .                     |														------------------                 ------------------ 
-	| .                     |														  validate.jsp                        error.jsp       
+	| reply page            |  code here write*/		            login.jsp               |                |                                              ------------------ 
+	|                       |                                                       	    |                |                                                 cpmpose.jsp       
+	| Compose page          |                                                       	    |                |		       ------------------	
+	|                       |                                                       	    |                |                 |	        | 
+	| Error Page            |                                                       	    |                |-----------------|    Error       | 
+	| .                     |                                                       	    |                |                 |                | 
+	| .                     |								    ------------------                 ------------------ 
+	| .                     |								       validate.jsp                        error.jsp       
 	|                       |
 	-------------------------
 	
-	 It is called Low Cohesion 															It is called high-cohesion
+	 It is called Low Cohesion 										It is called high-cohesion
 	 
 	
   -> High-cohesion 	 is always a good programming practice because it has several advantages.
@@ -100,23 +101,23 @@
 	Syntax 
 		
 	-------------------------------------------------------------------------------------------------
-	|		A		 			b 					= 		(C) 					d;              |
-	|	  -----				  ----						  ------				  -----             |
-	|		|					|							 |					    |               | 
-	|class or interface	  Name of reference			class or interface			reference variable  |
-	|	name 				variable 						name 					name            |
+	|       A		 	 b 		  = 	    (C) 		d;              |
+	|     -----		       ----			  ------	      -----             |
+	|      |			|		      	    |		        |               | 
+	|class or interface	  Name of reference          class or interface  reference variable     |
+	|	name 		    variable 			   name 		name            |
 	-------------------------------------------------------------------------------------------------
 	
 	
-	Mantra-1 For types-casting 
+   Mantra-1 For types-casting 
   ------------------------------
 
-		-------------------------------------------------------------------------------------------------
-        |		A		 			b 					= 		(C) 					d;              |
-        |	  -----				  ----						  ------				  -----             |
-        |		|					|							 |					    |               | 
-        |class or interface	  Name of reference			class or interface			reference variable  |
-        |	name 				variable 						name 					name            |
+	-------------------------------------------------------------------------------------------------
+        |	A		 	b 		    = 	  (C) 			d;              |
+        |     -----		      ----			 ------		      -----             |
+        |	|		       |			   |			|               | 
+        |class or interface	  Name of reference	    class or interface	    reference variable  |
+        |	name 		    variable 			name 			name            |
         -------------------------------------------------------------------------------------------------
 	
 	1. Compile-time checking one :- The type of 'd' and 'C' must have some relation either child to parent or parent to child or same type otherwise we will get compile time error saying inconvertable 
@@ -153,11 +154,11 @@
  --------------------------------
 
 	-------------------------------------------------------------------------------------------------
-	|		A		 			b 					= 		(C) 					d;              |
-	|	  -----				  ----						  ------				  -----             |
-	|		|					|							 |					    |               | 
-	|class or interface	  Name of reference			class or interface			reference variable  |
-	|	name 				variable 						name 					name            |
+	|     A		 		b 		   = 	 (C) 			d;              |
+	|   -----	   	       ----			------		      -----             |
+	|     |				|			  |			|               | 
+	|class or interface	  Name of reference	    class or interface	    reference variable  |
+	|	name 	  	     variable 			name 			name            |
 	-------------------------------------------------------------------------------------------------
 	
 	
@@ -193,11 +194,11 @@
 -------------------------------------------------
 
 	-------------------------------------------------------------------------------------------------
-	|		A		 			b 					= 		(C) 					d;              |
-	|	  -----				  ----						  ------				  -----             |
-	|		|					|							 |					    |               | 
-	|class or interface	  Name of reference			class or interface			reference variable  |
-	|	name 				variable 						name 					name            |
+	|     A		 		b 		  = 	   (C) 			d;              |
+	|   -----		       ----			  ------	       ----             |
+	|     |				|			    |			|               | 
+	|class or interface	  Name of reference		class or interface  reference variable  |
+	|	name 		     variable 		            name 		name            |
 	-------------------------------------------------------------------------------------------------
 	
 	3. Runtime object type of 'd' must be either same or drive(child)'C' otherwise we will get runtime exception ClassCastException.
@@ -229,15 +230,15 @@
 
 -> 
 	
-							Object	
-							  |
+					Object	
+					  |
 			 -----------------------------------
-			 |								   |		
-		 Base-1 							Base-2
-			|								   |
+			 |				   |		
+		      Base-1 				Base-2
+			|				   |
 	-----------------			 ----------------------------
-	|				|		     |							|
-Derive-1		Derive-2	Derive-3				   Derive-4
+	|		|			|        		    |
+Derive-1	     Derive-2		     Derive-3			 Derive-4
 
 
 

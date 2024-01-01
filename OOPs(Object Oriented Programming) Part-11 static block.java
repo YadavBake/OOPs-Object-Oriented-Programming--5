@@ -1,6 +1,6 @@
 
-																		OOPs(Object Oriented Programming) Part-11 ||static block
-																	===============================================================
+											OOPs(Object Oriented Programming) Part-11 ||static block
+										    ===============================================================
 
 --------------
  static Block
@@ -57,19 +57,19 @@ Q.1) Without writing main method is it possible to print some statements to the 
 		Yes ofcourse there are mutiple ways
 		
 				
-		class Test {											class Test{													class Test {
+		class Test {						class Test{						class Test {
 			                                                    	                                                        	
-			static int x = m1();                                	static Test t = new Test();                             	static Test t = new Test();
-			                                                    	                                                        	
-			public static int m1(){                             	{                                                       	Test (){
-				                                                		System.out.println("Hello I can print");            		
-				System.out.println("hello I can print");        		System.exit(0);                                     		System.out..println("Hello I can print");
-				System.exit(0);                                 	}                                                       		System.exit(0);
-				return 10;                                      	                                                        	}
-			}                                                   }                                                           }
+		static int x = m1();                                	static Test t = new Test();                             	static Test t = new Test();
+		                                                    	                                                  	
+		public static int m1(){                             	{                                                       	Test (){
+				                                        System.out.println("Hello I can print");            		
+		System.out.println("hello I can print");        	System.exit(0);                                     		System.out..println("Hello I can print");
+		System.exit(0);                                 	}                                                       	System.exit(0);
+		return 10;                                      	                                                        	}
+			}                                            }                                                           }
 		}
 
-	//By using method call 									by using instance block 										By using constructor.	
+	//By using method call 					by using instance block 						By using constructor.	
 		
 
 Note:- From 1.7v version onwords main() method mandatory to start a program execution hence a from 1.7v version onwords without writing main() method it is impossible to print some statements 
@@ -87,40 +87,40 @@ Note:- From 1.7v version onwords main() method mandatory to start a program exec
 		3. Execution of only child class main method. [23 toi 25 ] 
  
 			
-	class Base {																										class Drived extends Base {
-        -------------- -------                                                                                                  -------------- ------              	
-	  1 |static int i| |= 10;| 12                      					i = 0 [RIWO]                                          6 |static int x|| =100;| 17
-		-------------- -------                                      	j = 0 [RIWO]                                            -------------- ------              	
-		--------														x = 0 [RIWO]                                    	
-	  2 |static| 														y = 0 [RIWO]	                                	--------
-		-------- 														i = 10[R&W]                                       7 |static|
-		 {                                                    			j = 20[R&W]                                         --------
-			--------                                                    x = 100[R&W]                                    	{
-			|m1(); | 13                                                 y = 200[R&W]                                    		-------
-		    --------													                                                		|m2();| 18
-			-------------------------------------------------                                                           		-------
-			|System.out.println("Base class static block"); | 15                                                        	    -------------------------------------------------
-			-------------------------------------------------			                                                		|System.out.println("Drived first static block");| 20
-		}                                                               			java Base.java                      		--------------------------------------------------
-	    ----------------------------------------	                    				  |                             	}
+	class Base {													class Drived extends Base {
+       -------------- -------                                                                                             -------------- ------              	
+     1 |static int i| |= 10;| 12                      			i = 0 [RIWO]                                    6 |static int x|| =100;| 17
+       -------------- -------                                      	j = 0 [RIWO]                                      -------------- ------              	
+	    --------							x = 0 [RIWO]                                    	
+	  2 |static| 							y = 0 [RIWO]	                                     --------
+	    -------- 							i = 10[R&W]                                       7 |static|
+	   {                                                    	j = 20[R&W]                                         --------
+		--------                                                x = 100[R&W]                                    	{
+		|m1(); | 13                                             y = 200[R&W]                                    		-------
+	        --------								                                   		|m2();| 18
+		-------------------------------------------------                                                           		-------
+		|System.out.println("Base class static block"); | 15                                                        	    -------------------------------------------------
+		-------------------------------------------------			                                            |System.out.println("Drived first static block");| 20
+		}                                                               		   java Base.java                   --------------------------------------------------
+	        ----------------------------------------	                    			 |                             	}
 	  3	|public static void main(String args[])|                        	-----------------------------               	----------------------------------------
-		----------------------------------------                        	|							|                 8 |public static void main(String args[])|
-		{                                                               Base class 				  Drived class          	----------------------------------------
+		----------------------------------------                        	|	 		    |                 8 |public static void main(String args[])|
+		{                                                               Base class 	    	      Drived class          	----------------------------------------
 			                                                                                                            	{
 			m1();                                                                                                       		-------
 			System.out.println("Base main");                              java Derived                                  		|m2();| 23 
-		}                                                               		0                                       	    -------
-		-------------------------                                         Base class static block                       		------------------------------------
-	  4 |public static void m1() |                                      		0                                       		|System.out.println("Derive main");| 25 
-		-------------------------                                        Drived first static block		                		------------------------------------
+		}                                                               		0                                       	-------
+	     -------------------------                                         Base class static block                       		------------------------------------
+	  4 |public static void m1() |                                      		0                                       	|System.out.println("Derive main");| 25 
+	    --------------------------                                        Drived first static block		                	------------------------------------
 		{                                                                Derived Second static block                    	}
 			------------------------                                    		200                                     	-------------------------
 			|System.out.println(j);| 14                                   Derived main 		                              9 |public static void m2()|
 			------------------------	                                                                                	-------------------------
 		}                                                                                                               	
-		-------------- -----                                                                                            	{
+	    -------------- -----                                                                                            	{
 	  5 |static int j||= 20;|  16                                                                                       		-----------------------
-		-------------- -----                                                                                            		|System.out.println(y);| 19 24 
+	    -------------- -----                                                                                            		|System.out.println(y);| 19 24 
 	}                                                                                                                   		-----------------------
 	                                                                                                                    	}
 	    java Base                                                                                                           --------
@@ -128,12 +128,12 @@ Note:- From 1.7v version onwords main() method mandatory to start a program exec
         	0                                                                                                               --------
 	    Base static block                                                                                                   {
         	20                                                                                                               	----------------------------------------------------
-        Base main 	                                                                                                         	|System.out.println("Derived Second static block");| 21
+            Base main 	                                                                                                         	|System.out.println("Derived Second static block");| 21
                                                                                                                         		----------------------------------------------------
                                                                                                                         	}
 	                                                                                                                    	 -------------- ---------
 	                                                                                                                      11 |static int y| | = 200;| 22 
-                                                                                                                             -------------- ---------
+                                                                                                                                 -------------- ---------
 	                                                                                                                    }
     
  Note: whenever we are loading child clas automatically parent class will be loaded but whenever we are loading parent class child won't we loaded (because parent class members by default 

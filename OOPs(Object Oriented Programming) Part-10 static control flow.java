@@ -1,6 +1,6 @@
 
-																	OOPs(Object Oriented Programming) Part-10 ||static control flow
-																======================================================================
+											OOPs(Object Oriented Programming) Part-10 ||static control flow
+										     ======================================================================
 
 =======================
   Static control Flow 																
@@ -21,37 +21,37 @@
 			- RIWO = Read Indirect write only , R&w= Reand and Write.
  
  
-						class Base 	
+					class Base 	
 						{
 	i = 0[RIWO]			   --------------- --------							
-	j = 0[RIWO]			1-|	static int  i || = 10;| -7
+	j = 0[RIWO]			1-|static int  i || = 10; | -7
 	i=10[R&W]			  ---------------- --------			
 	i=20[R&W]			  
-						  ----------
+					       ----------
 					  2-  | static |
-						  ----------														java Base 
-							{																	0 
-								-------													    First static block 
-							 8 -|m1();|													    Second static block 
-							    -------														20
-								-------------------------------------------					Main method	
-							 10-|System.out.println("First static block");|
-								-------------------------------------------
+					      ----------								     java Base 
+			 	   	      {											 0 
+						-------									  First static block 
+					     8 -|m1();|									  Second static block 
+				    	         -------									20
+						-------------------------------------------				   Main method	
+					     10-|System.out.println("First static block");|
+						-------------------------------------------
 							}
-						  ------------------------------------------						Rules: 
-						3-|	public static void main(String []args) |
+			   		           ------------------------------------------						
+						3-|  public static void main(String []args) |
 						  ------------------------------------------							
 							{
-								-------
+							    -------
 							 13-|m1();|
-								-------
-							   ---------------------------------------
-						    15-|System.out.println(" Main Method "); |
-							   ---------------------------------------		
+							    -------
+						        ---------------------------------------
+						    15- |System.out.println(" Main Method "); |
+						        ---------------------------------------		
 							}
 						 
 						   -------------------------		
-						4-|	public static void m1()|
+						4-| public static void m1()|
 						   -------------------------
 							{
 								-----------------------
@@ -64,11 +64,11 @@
 						   
 							{   --------------------------------------------
 							11 -|System.out.println("Second static block");|
-								--------------------------------------------
+							    --------------------------------------------
 							}
-							------------  -------
-						6-	|static int j||= 20 |-12
-						    ------------  -------	
+					  	  ------------  -------
+						6-|static int j||= 20 |-12
+						  ------------  -------	
 						}
 						
 						
@@ -104,40 +104,31 @@
    -> If we aer trying to read directly then we will get compile time error sayin Illegal forward reference.
    
    
- Ex. 
+  class Test {								class Test {					class Test {
+     ---------------- ------- 					    ----------			                                    
+ 1  | static int x | |= 10; |  3        			1 - | static |                                              	   ---------	
+    -------------------------                                       ----------                                              	 1 |static |
+	--------                                                  {                                                       	   ---------
+	|static| 2                                                	System.out.println(x); // direct read           	{					x = 0 [RIWO]
+	--------                                                  }                                                     		m1();
+	{                           					            			                       		}
+		System.out.println(x);  // indirect read	   --------------  -------	                            				
+	 }                          				2- |static int x| |= 10; | -3  // i= 0 [RIWO]               	   ----------------------------	
+ } 	                            				   --------------  -------                                  	 2 |public static void m1(  ) |
+													            		    ----------------------------
+							}	 // CE: Illegal forward reference                           		{
+o/p: 10 											                                                                                			
+RE: NoSuchMetodError:main 						                                                            		System.out.println(x);
+                                                                                                                                    		}
+                                                                                                                                    	   -------------- --------	
+                                                                                                                                    	 3 |static int x| |=  10;|
+                                                                                                                                    	   -------------  --------
+                                                                                                                                    } 
+                                                                                                                                      0 
+                                                                                                                                      RE: NosuchMethodError: main 
 
-	 class Test {											 class Test {															class Test {
-																																		
-		 static int x = 10;         					      	                                							       	 static 
-																static                          							       {
-		static                      					      	 {                              							       	 m1();
-		{                           					      		 System.out.println(x);     							        }
-			System.out.println(x);  					      	 }                              							        public static void m1(){
-		 }                          					      	                                							       	 
-	 } 	                            					      	 static int x = 10;             							       	 System.out.println(x);
-															}                                   							       }
-																																	static int x =10;
-	o/p: 10 											CE: Illegal forward reference										}  
-	RE: NoSuchMetodError:main 																										o/p: 0 
-																																 RE: NoScuhMethodError: main 
-    
-    
-    
-    
+
 	
-	
-    
-	
-	 
-	 
-	  
-     
-     
-		
-		
-		
-		
-		
 		
 		
 		
